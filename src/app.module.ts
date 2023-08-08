@@ -4,6 +4,7 @@ import { TodoModule } from '@modules/todo/todo.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from '@shared/prisma/prisma.module';
+import { ResponseModule } from '@shared/response/response.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -18,6 +19,7 @@ import { AppService } from './app.service';
 
     // Shared modules
     PrismaModule,
+    ResponseModule,
 
     // Feature modules
     TodoModule,
