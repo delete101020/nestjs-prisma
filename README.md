@@ -26,7 +26,7 @@ npm install prisma --save-dev
 npx prisma init
 ```
 
-### 2.3 Integrate Prisma Merge
+### 2.3 Integrate Prisma Merge - WIP
 
 ```powershell
 npm i -D prisma-merge
@@ -43,6 +43,8 @@ Move `prisma` folder to `shared` folder
 
 ### 2.5 Add feature modules
 
+#### 2.5.1 Add project module
+
 ```powershell
 nest g mo todo
 nest g co todo --no-spec
@@ -50,3 +52,11 @@ nest g s todo --no-spec
 ```
 
 Move `todo` folder to `modules` folder
+
+#### 2.5.2 Add schema
+
+- Add new model schema to prisma/schemas/<model_name>.prisma
+
+- Re-generate base schema: `npm run prisma:generate`
+
+- Generate migrations: `npm run prisma:migrate:dev`
